@@ -1,0 +1,135 @@
+.card-item {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s;
+    perspective: 1000px;
+    flex: 1 0 calc(10% - 10px);
+    max-width: 100px;
+
+}
+.card-item-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(185, 255, 255);
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-radius: 13px;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-curtain {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: #f5cbcb;
+    background: radial-gradient(circle, rgba(245, 203, 203, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    backface-visibility: hidden;
+    padding: 2px;
+}
+
+.show {
+    transform: rotateY(180deg);
+}
+
+.card-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+    flex-wrap: wrap;
+    gap: 50px;  
+    padding: 100px;     
+}
+
+/* score and time */
+.scoreAndTime {
+    display: flex;
+    width: 300px;
+    margin: 20px auto;
+    justify-content: space-around;
+    text-align: center;
+}
+.score, .time {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(0, 195, 255);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+main {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid orange;
+    background-color: beige;
+    width: 250px;
+    height: 100px;
+    border-radius: 7px;
+    text-align: center;
+    transition: all 2s;
+}
+
+.menu button, .result button {
+    padding: 8px 50px;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: rgb(140, 107, 45);
+    color: white;
+    
+}
+
+.menu button:hover, .result button:hover {
+    background-color: rgb(252, 165, 2);
+}
+
+.menuHide {
+    top: -1000px;
+}
+
+.result {
+    width: 300px;
+    text-align: center;
+    border: 2px solid rebeccapurple;
+    padding: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+    background-color: beige;
+    border-radius: 5px;
+    display: none;
+}
+
+.result p {
+    font-size: 25px;
+}
